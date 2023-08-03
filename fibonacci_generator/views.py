@@ -18,16 +18,23 @@ def user_input(request):
 
         results = []
 
-        # condition 1: when user queried series is already stored in database,
+        # condition 1: when user queries series is invalid, output "Enter a valid number"
+        if nth_term <= 0:
+            n1 = data[max_n - 2].value
+            n2 = data[max_n - 1].value
+            n = nth_term - max_n
+            results = fibonacci_series(n, n1,n2)
+
+        # condition 2: when user queried series is already stored in database,
         # then directly retrieving series of 'n'  fibonacci numbers from database
-        if nth_term <= max_n:
+        elif nth_term <= max_n:
             for n_val in data:
                 if n_val.n <= nth_term:
                     results.append(n_val.value)
                 else:
                     break
 
-        # condition 2: when user queried series is partially stored in the database,
+        # condition 3: when user queried series is partially stored in the database,
         # retrieving already existing series from database and generating the missing series
         elif (nth_term > max_n) and (max_n != float('-inf')):
             n1 = data[max_n - 2].value
@@ -40,7 +47,7 @@ def user_input(request):
                 values = FibNum(n=val, value=results[val - 1])
                 values.save()
 
-        # condition 3: when database is empty, generating series of 'n' fibonacci numbers
+        # condition 4: when database is empty, generating series of 'n' fibonacci numbers
         else:
             results = fibonacci_series(nth_term, 0, 1)
             for val in range(0, nth_term):

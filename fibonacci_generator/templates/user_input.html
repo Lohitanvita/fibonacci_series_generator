@@ -17,12 +17,12 @@ referred from https://www.geeksforgeeks.org/html/ -->
   <form class="modal-content" method="POST">
       {% csrf_token %}
       <div class="container">
-          <h1><center>Find Fibonacci Series</center></h1>
-          <h5><center>Please Enter a number 'n' to generate a series of 'n' fibonacci numbers</center></h5>
+          <h1><center>Generate Fibonacci Series</center></h1>
+          <h5><center>Please enter a number to generate the first 'n' fibonacci numbers</center></h5>
           <hr>
           <div class="clearfix">
               <label for="n_term">Input n</label><br><br>
-              <input type="number" id="n_term" name="n_term" placeholder=0><br><br>
+              <input type="number" id="n_term" name="n_term" placeholder=0 required><br><br>
               <button type="submit" name="enter_input" onclick="return true">Submit</button>
           </div>
       </div>
