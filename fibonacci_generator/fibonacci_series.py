@@ -26,7 +26,7 @@ def fibonacci_series(n, n1, n2):
            count += 1
     return results
 
-print(fibonacci_series(5,2,3))
+# print(fibonacci_series(5,2,3))
 
 
 """def fib_series(n,):

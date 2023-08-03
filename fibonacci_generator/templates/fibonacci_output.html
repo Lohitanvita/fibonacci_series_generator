@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Fibonacci Output</title>
+    <link rel="stylesheet" href="{% static 'css/style_output.css' %}">
 
 </head>
 <body>
-<h1><center>Fibonacci Series for given N</center></h1>
-<h1> <center> {{nth_value}}</center></h1>
-<p><center>{{nums}}</center></p>
+<div style="border-style: dotted; background-color: white; width: 600px; height:400px; margin-left: 30%; margin-top:30px">
+<h1 class="text">Fibonacci Series for given N</h1>
+<h3 class="text">The list of {{nth_term}} fibonacci series is :</h3>
+    <h4 class="text">{{fib_values}}</h4>
 
+<button class="button_back" onclick="myFunction()">Back</button>
+</div>
+<script>
+function myFunction() {
+  window.location = "";
+}
+</script>
 
 </body>
 </html>
