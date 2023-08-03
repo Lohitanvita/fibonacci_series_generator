@@ -1,5 +1,18 @@
+/* stylesheet for fibonacci_output.html */
+
+/* setting a style for content of the page*/
 .text {
     text-align: center;
     color: black;
     margin: 90px
   }
+
+/* background styling */
+.div{
+    border-style: dotted;
+    background-color: white;
+    width: 600px;
+    height:400px;
+    margin-left: 30%;
+    margin-top:30px
+    }

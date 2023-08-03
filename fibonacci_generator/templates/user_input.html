@@ -1,3 +1,6 @@
+<!-- HTML page to take user input 'n' to calculate n fibonacci numbers
+referred from https://www.geeksforgeeks.org/html/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
@@ -8,20 +11,21 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
+
 <body>
 
   <form class="modal-content" method="POST">
-    {% csrf_token %}
-    <div class="container">
-      <h1><center>Find Fibonacci Series</center></h1>
-      <h5><center>Please Enter a number 'n' to generate a series of 'n' fibonacci numbers</center></h5>
-      <hr>
-      <div class="clearfix">
-        <label for="n_term">Input n</label><br><br>
-        <input type="number" id="n_term" name="n_term" placeholder=0><br><br>
-        <button type="submit" name="enter_input" onclick="return true">Submit</button>
+      {% csrf_token %}
+      <div class="container">
+          <h1><center>Find Fibonacci Series</center></h1>
+          <h5><center>Please Enter a number 'n' to generate a series of 'n' fibonacci numbers</center></h5>
+          <hr>
+          <div class="clearfix">
+              <label for="n_term">Input n</label><br><br>
+              <input type="number" id="n_term" name="n_term" placeholder=0><br><br>
+              <button type="submit" name="enter_input" onclick="return true">Submit</button>
+          </div>
       </div>
-    </div>
   </form>
 
 </body>

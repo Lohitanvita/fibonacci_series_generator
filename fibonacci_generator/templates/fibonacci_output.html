@@ -1,25 +1,29 @@
+<!-- HTML page to render list of Fibonacci Series from Database -->
+
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
 <head>
+
     <meta charset="UTF-8">
     <title>Fibonacci Output</title>
     <link rel="stylesheet" href="{% static 'css/style_output.css' %}">
 
 </head>
 <body>
-<div style="border-style: dotted; background-color: white; width: 600px; height:400px; margin-left: 30%; margin-top:30px">
-<h1 class="text">Fibonacci Series for given N</h1>
-<h3 class="text">The list of {{nth_term}} fibonacci series is :</h3>
-    <h4 class="text">{{fib_values}}</h4>
 
-<button class="button_back" onclick="myFunction()">Back</button>
-</div>
-<script>
-function myFunction() {
-  window.location = "";
-}
-</script>
+    <div class="div">
+        <h1 class="text">Fibonacci Series for given N</h1>
+        <h3 class="text">The list of {{nth_term}} fibonacci series is :</h3>
+        <h4 class="text">{{fib_values}}</h4>
+        <button class="button_back" onclick="myFunction()">Back</button>
+    </div>
+
+    <script>
+    function myFunction() {
+      window.location = "";
+    }
+    </script>
 
 </body>
 </html>
